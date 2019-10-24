@@ -12,7 +12,7 @@ public class Korpa {
     }
     public boolean dodajArtikl(Artikl a){
         if(br_artikala<artikli.length){
-            artikli[br_artikala]=new Artikl(a.getNaziv(), a.getCijena(), a.getKod());
+            artikli[br_artikala]=a;
             br_artikala++;
             return true;
         }
@@ -49,6 +49,9 @@ public class Korpa {
         }
         return  suma;
 
+    }
+    public int DajBrArtikala(){
+        return br_artikala;
     }
 
 }
